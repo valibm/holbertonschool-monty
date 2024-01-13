@@ -62,3 +62,26 @@ void swap(stack_t **stack, unsigned int line)
 	node->prev = NULL;
 	*stack = node;
 }
+
+/**
+ * pall - Prints all the values on the stack,
+ *        starting from the top of the stack.
+ * @stack: Pointer to the top of a stack.
+ * @line: Unused.
+ * Return: Void.
+ */
+void pall(stack_t **stack, unsigned int __attribute__((unused)) line)
+{
+	int i = 0;
+	stack_t *tmp;
+
+	tmp = *stack;
+
+	while (tmp)
+	{
+		if (tmp != NULL)
+		printf("%d\n", tmp->n);
+		i++;
+		tmp = tmp->next;
+	}
+}
