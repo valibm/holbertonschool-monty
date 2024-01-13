@@ -19,7 +19,7 @@ void add(stack_t **stack, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 
-        addition = tmp->n + tmp->next->n;
+	addition = tmp->n + tmp->next->n;
 	pop(stack, line);
 
 	(*stack)->n = addition;
